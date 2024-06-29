@@ -73,6 +73,10 @@ class DistrictSeeder extends Seeder
             [
                 'name' => 'Indragiri Hulu',
                 'slug' => 'INDR'
+            ],
+            [
+                'name' => 'Sijunjung',
+                'slug' => 'SIJ'
             ]
         ];
 

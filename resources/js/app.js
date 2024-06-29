@@ -1,1 +1,3 @@
-import './bootstrap';
+import "./bootstrap";
+var TurboLinks = require("turbolinks");
+TurboLinks.start();
