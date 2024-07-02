@@ -28,6 +28,10 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/daterangepicker/daterangepicker.css') }}" />
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('assets/plugins/summernote/summernote-bs4.min.css') }}" />
+    <!-- Toastr -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/toastr/toastr.min.css') }}">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
     @livewireStyles
 </head>
 
@@ -114,7 +118,8 @@
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         John Pierce
-                                        <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                                        <span class="float-right text-sm text-muted"><i
+                                                class="fas fa-star"></i></span>
                                     </h3>
                                     <p class="text-sm">I got your message bro</p>
                                     <p class="text-sm text-muted">
@@ -289,6 +294,10 @@
     <script src="{{ asset('assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('assets/dist/js/adminlte.js') }}"></script>
+    <!-- Toastr -->
+    <script src="{{ asset('assets/plugins/toastr/toastr.min.js') }}"></script>
+    <!-- SweetAlert2 -->
+    <script src="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
     @livewireScripts
 </body>
 
