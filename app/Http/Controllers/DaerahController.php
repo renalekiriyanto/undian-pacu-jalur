@@ -9,4 +9,8 @@ class DaerahController extends Controller
     public function index(){
         return view('daerah.index');
     }
+
+    public function create(){
+        return view('daerah.create');
+    }
 }

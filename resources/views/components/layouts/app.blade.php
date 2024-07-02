@@ -301,7 +301,6 @@
     <script src="{{ asset('assets/dist/js/pages/dashboard.js') }}"></script>
     <!-- Toastr -->
     <script src="{{ asset('assets/plugins/toastr/toastr.min.js') }}"></script>
-    @livewireScripts
     <script>
         $(function() {
             //Initialize Select2 Elements
@@ -313,6 +312,7 @@
             })
         })
     </script>
+    @livewireScripts
 </body>
 
 </html>

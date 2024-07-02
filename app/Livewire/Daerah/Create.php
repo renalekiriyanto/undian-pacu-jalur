@@ -7,6 +7,7 @@ use App\Models\Region;
 use Livewire\Component;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Str;
+use App\Livewire\Daerah\Index as DaerahIndex;
 
 
 class Create extends Component
@@ -47,8 +48,8 @@ class Create extends Component
             'slug' => $slug_tmp,
             'district_id' => $district->id
         ]);
-
-        return redirect()->route('daerah.list')->with('success', 'Berhasil tambah daerah');
+        $this->dispatch('success')->to(DaerahIndex::class);
+        return redirect()->route('daerah.list')->with('success', 'Data daerah berhasil ditambahkan');
     }
 
     public function selectChange($value){

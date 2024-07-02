@@ -1,11 +1,16 @@
 <div>
     <div class="p-3">
-        <button type="button" class="btn btn-success toastrDefaultSuccess">
-            Launch Success Toast
-        </button>
         <div class="card">
             <div class="card-header align-content-center">
+                @if (session()->has('success'))
+                    <div id="alertSuccess" class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
                 <h3 class="card-title">List Daerah</h3>
+                {{-- <button class="btn btn-sm btn-primary btn-flat float-right toastsDefaultSuccess">Tambah
+                    Daerah</button> --}}
                 <a href="{{ route('daerah.create') }}" class="btn btn-sm btn-primary btn-flat float-right">Tambah
                     Daerah</a>
             </div>
@@ -78,11 +83,12 @@
     </div>
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
 
-    <script>
-        $(function() {
-            $('.toastrDefaultSuccess').click(function() {
+    @script
+        <script>
+            $wire.on('success', (event) => {
+                console.log('asdasd', event)
                 toastr.success('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
             });
-        })
-    </script>
+        </script>
+    @endscript
 </div>

@@ -18,8 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
-Route::get('/daerah', DaerahIndex::class)->name('daerah.list');
-Route::get('/daerah/create', DaerahCreate::class)->name('daerah.create');
+Route::get('/daerah', [DaerahController::class, 'index'])->name('daerah.list');
+Route::get('/daerah/create', [DaerahController::class, 'create'])->name('daerah.create');
+// Route::get('/daerah/create', DaerahCreate::class)->name('daerah.create');
 Route::get('/login', [AuthController::class, 'login'])->name('login.page');
 Route::get('/register', [AuthController::class, 'register'])->name('register.page');
 Route::get('/forgot-password', [AuthController::class, 'forgotPasswordPage'])->name('forgotPasswordPage.page');
