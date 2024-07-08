@@ -2,6 +2,6 @@
 @section('title', 'Tambah Arena')
 @section('content')
     <div>
-        <livewire:daerah.create />
+        <livewire:arena.create />
     </div>
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.main')
-@section('title', 'Tambah Arena')
+@section('title', 'Arena')
 @section('content')
     <div>
-        <livewire:daerah.create />
+        <livewire:arena.index />
     </div>
 @endsection

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArenaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DaerahController;
 use App\Http\Controllers\HomeController;
@@ -17,9 +18,16 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
-Route::get('/daerah', [DaerahController::class, 'index'])->name('daerah.list');
-Route::get('/daerah/create', [DaerahController::class, 'create'])->name('daerah.create');
+Route::prefix('daerah')->group(function () {
+    Route::get('/', [DaerahController::class, 'index'])->name('daerah.list');
+    Route::get('/create', [DaerahController::class, 'create'])->name('daerah.create');
+});
+Route::prefix('arena')->group(function () {
+    Route::get('/', [ArenaController::class, 'index'])->name('arena.list');
+    Route::get('/create', [ArenaController::class, 'create'])->name('arena.create');
+});
 // Route::get('/daerah/create', DaerahCreate::class)->name('daerah.create');
 Route::get('/login', [AuthController::class, 'login'])->name('login.page');
 Route::get('/register', [AuthController::class, 'register'])->name('register.page');
